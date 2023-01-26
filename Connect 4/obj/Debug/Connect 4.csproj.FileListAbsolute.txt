@@ -14,3 +14,11 @@ C:\Users\ali6624\OneDrive - Bradford Grammar School\Home Drive\A Level\Comp Sci\
 C:\Users\ali6624\OneDrive - Bradford Grammar School\Home Drive\A Level\Comp Sci\C#\Connect 4\obj\Debug\Connect 4.csproj.CoreCompileInputs.cache
 C:\Users\ali6624\OneDrive - Bradford Grammar School\Home Drive\A Level\Comp Sci\C#\Connect 4\obj\Debug\Connect 4.exe
 C:\Users\ali6624\OneDrive - Bradford Grammar School\Home Drive\A Level\Comp Sci\C#\Connect 4\obj\Debug\Connect 4.pdb
+C:\Users\jonty\Documents\GitHub\ConnectFour\Connect 4\bin\Debug\Connect 4.exe.config
+C:\Users\jonty\Documents\GitHub\ConnectFour\Connect 4\bin\Debug\Connect 4.exe
+C:\Users\jonty\Documents\GitHub\ConnectFour\Connect 4\bin\Debug\Connect 4.pdb
+C:\Users\jonty\Documents\GitHub\ConnectFour\Connect 4\obj\Debug\Connect 4.csproj.AssemblyReference.cache
+C:\Users\jonty\Documents\GitHub\ConnectFour\Connect 4\obj\Debug\Connect 4.csproj.SuggestedBindingRedirects.cache
+C:\Users\jonty\Documents\GitHub\ConnectFour\Connect 4\obj\Debug\Connect 4.csproj.CoreCompileInputs.cache
+C:\Users\jonty\Documents\GitHub\ConnectFour\Connect 4\obj\Debug\Connect 4.exe
+C:\Users\jonty\Documents\GitHub\ConnectFour\Connect 4\obj\Debug\Connect 4.pdb
