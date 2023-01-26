@@ -141,26 +141,19 @@ namespace Connect_4
 
         static bool CheckStraightsDown(ref char winner, string[,] board, int maxColumn, int maxRow)
         {
-            for (int i = 1; i < maxColumn; i++)
-            {
-                for (int x = 1; x < maxRow - 3; x++)
-                {
-                    if (board[x, i] == "X" || board[x, i] == "O")
-                    {
+            for (int i = 1; i < maxColumn; i++){
+                for (int x = 1; x < maxRow - 3; x++){
+                    if (board[x, i] == "X" || board[x, i] == "O"){
                         int inARow = 0;
                         winner = Convert.ToChar(board[x, i]);
-                        for (int count = 0; count < 4; count++)
-                        {
-                            if (board[x + count, i] == Convert.ToString(winner))
-                            {
+                        for (int count = 0; count < 4; count++){
+                            if (board[x + count, i] == Convert.ToString(winner)){
                                 inARow++;
                             }
-                            else
-                            {
+                            else{
                                 break;
                             }
-                            if (inARow == 4)
-                            {
+                            if (inARow == 4){
                                 return true;
                             }
                         }
@@ -170,28 +163,20 @@ namespace Connect_4
             return false;
         }
 
-        static bool CheckStraightsRight(ref char winner, string[,] board, int maxColumn, int maxRow)
-        {
-            for (int i = 1; i < maxColumn - 3; i++)
-            {
-                for (int x = 1; x < maxRow; x++)
-                {
-                    if (board[x, i] == "X" || board[x, i] == "O")
-                    {
+        static bool CheckStraightsRight(ref char winner, string[,] board, int maxColumn, int maxRow){
+            for (int i = 1; i < maxColumn - 3; i++){
+                for (int x = 1; x < maxRow; x++){
+                    if (board[x, i] == "X" || board[x, i] == "O"){
                         int inARow = 0;
                         winner = Convert.ToChar(board[x, i]);
-                        for (int count = 0; count < 4; count++)
-                        {
-                            if (board[x, i + count] == Convert.ToString(winner))
-                            {
+                        for (int count = 0; count < 4; count++){
+                            if (board[x, i + count] == Convert.ToString(winner)){
                                 inARow++;
                             }          
-                            else
-                            {
+                            else{
                                 break;
                             }
-                            if (inARow == 4)
-                            {
+                            if (inARow == 4){
                                 return true;
                             }
                         }
@@ -201,28 +186,20 @@ namespace Connect_4
             return false;
         }
 
-        static bool CheckDiagonalsRight(ref char winner, string[,] board, int maxColumn, int maxRow)
-        {
-            for (int i = 1; i < maxColumn - 3; i++)
-            {
-                for (int x = 1; x < maxRow - 3; x++)
-                {
-                    if (board[x, i] == "X" || board[x, i] == "O")
-                    {
+        static bool CheckDiagonalsRight(ref char winner, string[,] board, int maxColumn, int maxRow){
+            for (int i = 1; i < maxColumn - 3; i++){
+                for (int x = 1; x < maxRow - 3; x++){
+                    if (board[x, i] == "X" || board[x, i] == "O"){
                         int inARow = 0;
                         winner = Convert.ToChar(board[x, i]);
-                        for (int count = 0; count < 4; count++)
-                        {
-                            if (board[x + count, i + count] == Convert.ToString(winner))
-                            {
+                        for (int count = 0; count < 4; count++){
+                            if (board[x + count, i + count] == Convert.ToString(winner)){
                                 inARow++;
                             }
-                            else
-                            {
+                            else{
                                 break;
                             }
-                            if (inARow == 4)
-                            {
+                            if (inARow == 4){
                                 return true;
                             }
                         }
@@ -232,28 +209,20 @@ namespace Connect_4
             return false;
         }
 
-        static bool CheckDiagonalsLeft(ref char winner, string[,] board, int maxColumn, int maxRow)
-        {
-            for (int i = maxColumn - 1; i > 3; i--)
-            {
-                for (int x = 1; x < maxRow -3; x++)
-                {
-                    if (board[x, i] == "X" || board[x, i] == "O")
-                    {
+        static bool CheckDiagonalsLeft(ref char winner, string[,] board, int maxColumn, int maxRow){
+            for (int i = maxColumn - 1; i > 3; i--){
+                for (int x = 1; x < maxRow -3; x++){
+                    if (board[x, i] == "X" || board[x, i] == "O"){
                         int inARow = 0;
                         winner = Convert.ToChar(board[x, i]);
-                        for (int count = 0; count < 4; count++)
-                        {
-                            if (board[x + count, i - count] == Convert.ToString(winner))
-                            {
+                        for (int count = 0; count < 4; count++){
+                            if (board[x + count, i - count] == Convert.ToString(winner)){
                                 inARow++;
                             }
-                            else
-                            {
+                            else{
                                 break;
                             }
-                            if (inARow == 4)
-                            {
+                            if (inARow == 4){ 
                                 return true;
                             }
                         }
@@ -263,58 +232,46 @@ namespace Connect_4
             return false;
         }
 
-        static void PlayerTurn(ref string[,] board, ref char playersTurn, int maxColumn, int maxRow)
-        {
+        static void PlayerTurn(ref string[,] board, ref char playersTurn, int maxColumn, int maxRow){
             bool turnDone = false;
             int choice;
             int row = maxRow - 1;
 
             Console.WriteLine($"\nIt is player {playersTurn}'s turn.\nEnter the column you want to slot your chip:");
-            while (!int.TryParse(Console.ReadLine(), out choice))
-            {
+            while (!int.TryParse(Console.ReadLine(), out choice)){
                 Console.WriteLine("\nThats not a column on the board!\nEnter the column you want to slot your chip:");
             }
-            for (int i = 1; i < maxRow; i++)
-            {
-                if (((i == 1) && (board[i, choice] == "X")) || ((i == 1) && (board[i, choice] == "O")))
-                {
+            for (int i = 1; i < maxRow; i++){
+                if (((i == 1) && (board[i, choice] == "X")) || ((i == 1) && (board[i, choice] == "O"))){
                     break;
                 }
-                else if (board[i, choice] == "X" || board[i, choice] == "O")
-                {
+                else if (board[i, choice] == "X" || board[i, choice] == "O"){
                     row = i - 1;
                     turnDone = true;
                     break;
                 }
-                else if (i == maxRow - 1)
-                {
+                else if (i == maxRow - 1){
                     row = i;
                     turnDone = true;
                     break;
                 }
             }
 
-            while (!turnDone)
-            {
+            while (!turnDone){
                 Console.WriteLine("\nThat column is full!\nEnter the column you want to slot your chip:");
-                while (!int.TryParse(Console.ReadLine(), out choice))
-                {
+                while (!int.TryParse(Console.ReadLine(), out choice)){
                     Console.WriteLine("\nThats not a column on the board!\nEnter the column you want to slot your chip:");
                 }
-                for (int i = 1; i < maxRow; i++)
-                {
-                    if (((i == 1) && (board[i, choice] == "X")) || ((i == 1) && (board[i, choice] == "O")))
-                    {
+                for (int i = 1; i < maxRow; i++){
+                    if (((i == 1) && (board[i, choice] == "X")) || ((i == 1) && (board[i, choice] == "O"))){
                             break;
                     }
-                    else if (board[i, choice] == "X" || board[i, choice] == "O")
-                    {
+                    else if (board[i, choice] == "X" || board[i, choice] == "O"){
                         row = i - 1;
                         turnDone = true;
                         break;
                     }
-                    else if (i == maxRow - 1)
-                    {
+                    else if (i == maxRow - 1) { 
                         row = i;
                         turnDone = true;
                         break;
@@ -323,12 +280,10 @@ namespace Connect_4
             }
             board[row, choice] = Convert.ToString(playersTurn);
 
-            if (playersTurn == 'X')
-            {
+            if (playersTurn == 'X'){
                 playersTurn = 'O';
             }
-            else
-            {
+            else{
                 playersTurn = 'X';
             }
         }
